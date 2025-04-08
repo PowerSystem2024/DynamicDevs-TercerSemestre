@@ -1,0 +1,61 @@
+<diagram program="umletino" version="15.1"><zoom_level>17</zoom_level><element><id>UMLClass</id><coordinates><x>630</x><y>503</y><w>408</w><h>323</h></coordinates><panel_attributes>Computadora
+--
+idComputadora: number
+nombre: string
+monitor: Monitor
+teclado: Teclado
+raton: Raton
+_contadorComputadoras: number_
+--
+toString(): string
+--
+Responsabilidades:
+-- Crear objetos de tipo Computadora</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1225</x><y>503</y><w>357</w><h>323</h></coordinates><panel_attributes>Orden
+--
+_idOrden: number
+_computadoras: Computadora []
+_contadorOrdenes: number_
+--
+agregarComputadora(computadora)
+mostrarOrden()
+--
+Responsabilidades:
+-- Crear objetos de tipo Orden y almacenar un arreglo de objetos de tipo Computadora</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1174</x><y>1455</y><w>357</w><h>323</h></coordinates><panel_attributes>Raton
+--
+idRatron: number
+_contadorRatones: number_
+--
+toString(): string
+--
+Responsabilidades:
+-- Crear objetos de tipo Raton</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>664</x><y>1013</y><w>357</w><h>323</h></coordinates><panel_attributes>Monitor
+--
+idMonitor: number
+marca: string
+tamanio: string
+_contadorMonitores: number_
+--
+idMonitor(): number
+toString(): string
+--
+Responsabilidades:
+-- Crear objetos de tipo Monitor</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1480</x><y>979</y><w>357</w><h>323</h></coordinates><panel_attributes>DispositivoEntrada
+--
+tipoEntrada: string
+marca: string
+--
+getTipoEntrada()
+setTipoEntrada()
+getMarca()
+setMarca()
+--
+Responsabilidades:
+-- Crear objetos de DispositivoEntrada</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1803</x><y>1455</y><w>357</w><h>323</h></coordinates><panel_attributes>Teclado
+--
+-idTeclado: number
+_contadorTeclado: number_
+--
+toString(): string
+--
+Responsabilidades:
+-- Crear objetos de tipo Teclado</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1021</x><y>673</y><w>238</w><h>51</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>120;10;10;10</additional_attributes></element><element><id>Text</id><coordinates><x>1038</x><y>605</y><w>170</w><h>119</h></coordinates><panel_attributes>agregar</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>817</x><y>809</y><w>51</w><h>238</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;120</additional_attributes></element></diagram>
