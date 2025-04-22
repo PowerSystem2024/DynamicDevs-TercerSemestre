@@ -134,3 +134,21 @@ orden.agregarComputadora(computadora3);
 
 // Mostrar orden
 console.log(orden.mostrarOrden());
+
+// Ejemplo de polimorfismo
+
+// Polimorfismo en cada una de las clases:
+function mostrarDetalles(dispositivos) {
+    for (let dispositivo of dispositivos) {
+        console.log(dispositivo.toString());
+    }
+}
+
+// Creamos un array de dispositivos
+const dispositivos = [teclado1, teclado2, teclado3, raton1, raton2, raton3, monitor1, monitor2, monitor3];
+
+// Mostramos los detalles de cada dispositivo usando nuestra funcion creada previamente
+mostrarDetalles(dispositivos);
+
+//La clase orden no es posible de mostrarla como polimorfismo ya que no tiene un metodo toString(),
+//Si la clase orden tuviese un metodo toString() se podrian mostrar los detalles de la orden y aplicar polimorfismo como en las demas clases.
