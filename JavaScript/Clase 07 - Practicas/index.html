@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Problema de las N Reinas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    table {
+      border-collapse: collapse;
+      margin: 20px auto;
+    }
+    td {
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 28px;
+    }
+    .white { background-color: #f0d9b5; }
+    .black { background-color: #b58863; }
+    .queen { color: red; }
+
+    input, button {
+      font-size: 16px;
+      padding: 8px 12px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>♛ Problema de las N Reinas</h1>
+  <label for="nInput">Ingrese N (entre 4 y 9): </label>
+  <input type="number" id="nInput" min="4" max="9" value="8">
+  <button onclick="resolver()">Resolver</button>
+
+  <div id="tablero"></div>
+  <p id="indices"></p>
+  <p>
+    <button onclick="anterior()">⬅ Anterior</button>
+    <button onclick="siguiente()">Siguiente ➡</button>
+  </p>
+  <p id="contador"></p>
+
+  <script src="n_reinas.js"></script>
+</body>
+</html>
