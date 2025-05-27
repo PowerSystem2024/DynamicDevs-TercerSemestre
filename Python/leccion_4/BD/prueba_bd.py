@@ -3,7 +3,6 @@
 import psycopg2 
 
 conexion = psycopg2.connect(user= "postgres", password= "admin", host= "localhost", port = "5432", database= "test_bd")
-
 # print(conexion) # Imprimimos la conexión a la base de datos
 
 # Creamos un cursor para ejecutar comandos SQL
