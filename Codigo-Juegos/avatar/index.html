@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta author="Dynamic Devs">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Juego de Avatar: La leyenda de Aang">
+    <meta name="keywords" content="Avatar, Aang, Katara, Zuko, Toph, Juego, HTML, CSS, JavaScript">
+    <title>LA LEYENDA DE AANG: AVATAR</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <h1>AVATAR 🔥 💧 🌱 💨 </h1>
+
+    <section id="selecionar-personaje">
+        <h2>Selecciona tu personaje</h2>
+
+        <label for="Zuko">Zuko 🔥</label>
+        <input type="radio" name="personaje" id="Zuko"/>
+
+        <label for="Katara">Katara 💧</label>
+        <input type="radio" name="personaje" id="Katara"/>
+
+        <label for="Aang">Aang 💨</label>
+        <input type="radio" name="personaje" id="Aang"/>
+
+        <label for="Toph">Toph 🌱</label>
+        <input type="radio" name="personaje" id="Toph"/>
+
+        <button class="boton-principal" id="boton-personaje">Seleccionar</button>
+    </section>
+
+    <section id="seleccionar-ataque">
+        <h2>Elige tu ataque</h2>
+        <p>Tu personaje (<span id="personaje-jugador"></span>) tiene <span>3</span> vidas</p>
+        <p>Los personajes del enemigo (<span id="personaje-pc"></span>) tienen <span>3</span> vidas</p>
+        <p class="margen">
+            <button class="boton-fuego boton-border" id="boton-fuego">Fuego 🔥</button>
+            <button class="boton-agua boton-border" id="boton-agua">Agua 💧</button>
+            <button class="boton-tierra boton-border" id="boton-tierra">Tierra 🌱</button>
+            <button class="boton-aire boton-border" id="boton-aire">Aire 💨</button>
+        </p>
+    </section>
+
+    <section id="reiniciar">
+        <button class="boton-reiniciar boton-principal" id="boton-reiniciar">Reiniciar</button>
+    </section>
+
+    <script src="./js/avatar.js"></script>
+</body>
+</html>
