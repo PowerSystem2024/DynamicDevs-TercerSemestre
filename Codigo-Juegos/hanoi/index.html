@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torres de Hanói</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Torres de Hanói</h1>
+    <div class="controles">
+        <label for="discos">Número de discos:</label>
+        <input type="number" id="discos" min="1" max="8" value="3">
+        <button id="iniciar">Iniciar Juego</button>
+        <button id="resolver">Resolver Automático</button>
+    </div>
+    <div class="torres" id="torres">
+        <!-- Las torres se generan con JavaScript -->
+    </div>
+    <div id="pasos"></div>
+    <script src="script.js"></script>
+</body>
+</html>

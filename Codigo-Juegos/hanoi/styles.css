@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+.controles {
+    margin: 20px 0;
+}
+
+.torres {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 50px;
+}
+
+.torre {
+    width: 20px;
+    height: 200px;
+    background-color: #8B4513; /* Marrón para la varilla */
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.disco {
+    height: 30px;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#pasos {
+    margin-top: 20px;
+    font-family: monospace;
+}
