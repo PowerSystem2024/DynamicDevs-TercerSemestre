@@ -1,393 +1,578 @@
-/* Estilos Generales */
+/* Importar fuentes de Google Fonts (asegúrate de que estén en tu HTML) */
+/*
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Zen+Dots&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+*/
+
+/* --- */
+
+/* Estilos Generales - El Santuario Elemental */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+:root {
+    /* Paleta de Colores Místicos */
+    --color-bg-light: #fdfaf0; /* Fondo muy claro, crema suave */
+    --color-bg-medium: #e0d9c4; /* Tono medio, beige cálido */
+    --color-text-dark: #3c4048; /* Azul pizarra oscuro para texto principal */
+    --color-accent-gold: #c28c47; /* Oro antiguo, elegante */
+    --color-shadow-soft: rgba(0, 0, 0, 0.1); /* Sombra muy suave */
+    --color-border-subtle: #b4a78c; /* Borde grisáceo-beige */
+
+    /* Colores Elementales con profundidad */
+    --color-fuego: #e6522c; /* Rojo naranja cálido */
+    --color-agua: #3d8bff; /* Azul agua vibrante */
+    --color-tierra: #7a6148; /* Marrón tierra profundo */
+    --color-aire: #9fe2bf; /* Verde menta suave */
+
+    /* Gradientes Elementales para efectos de brillo */
+    --gradient-fuego-light: radial-gradient(circle, #ff9f7f 0%, #e6522c 100%);
+    --gradient-agua-light: radial-gradient(circle, #99c2ff 0%, #3d8bff 100%);
+    --gradient-tierra-light: radial-gradient(circle, #a18a6e 0%, #7a6148 100%);
+    --gradient-aire-light: radial-gradient(circle, #c7ffe0 0%, #9fe2bf 100%);
+}
+
 body {
-    font-family: 'Nunito', sans-serif;
-    background-color: #f4f1de; 
-    color: #3a3a3a;
+    font-family: 'Nunito', sans-serif; /* Fuente legible y amigable */
+    background: var(--color-bg-light); /* Fondo suave y claro */
+    color: var(--color-text-dark); /* Texto oscuro para contraste */
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    padding: 20px;
-    line-height: 1.6;
+    padding: 30px;
+    line-height: 1.8;
+    overflow-x: hidden;
 }
 
 header {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     text-align: center;
 }
 
 h1 {
-    font-family: 'Cinzel Decorative', cursive;
-    color: #8B4513; /* Marrón tierra */
-    font-size: 2.8em;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    font-family: 'Cormorant Garamond', serif; /* Elegante y con presencia */
+    color: var(--color-accent-gold); /* Oro místico */
+    font-size: 5em; /* Grande y majestuoso */
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.1), 0 0 20px rgba(194, 140, 71, 0.5); /* Sombra y brillo dorado */
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    text-transform: capitalize; /* Iniciales mayúsculas */
+    animation: fadeInScale 1.5s ease-out;
+}
+
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
 }
 
 h2 {
-    font-family: 'Cinzel Decorative', cursive;
-    color: #A0522D; /* Sienna */
-    margin-bottom: 20px;
+    font-family: 'Zen Dots', cursive; /* Mística y moderna para subtítulos */
+    color: var(--color-text-dark);
+    margin-bottom: 30px;
     text-align: center;
-    font-size: 1.8em;
+    font-size: 2.5em; /* Aumentado */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after { /* Separador sutil */
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background: var(--color-border-subtle);
+    border-radius: 2px;
 }
 
 main {
     width: 100%;
-    max-width: 800px; /* Ancho máximo para el contenido principal */
+    max-width: 960px; /* Más espacio para una sensación de amplitud */
 }
 
-/* Estilo de las secciones como tarjetas */
-.tarjeta-seccion {
-    background-color: #fffaf0; /* Blanco floral, un poco más cálido */
-    border: 2px solid #D2B48C; /* Borde color beige */
-    border-radius: 10px;
-    padding: 25px;
-    margin-bottom: 25px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    text-align: center; /* Centra el botón dentro de la sección */
-}
-.margen{
-    margin: 15px;
+/* Estilo de las secciones - Pergaminos de Conocimiento */
+section {
+    background-color: var(--color-bg-light);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: 15px; /* Bordes suaves */
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px var(--color-shadow-soft); /* Sombra suave y profunda */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
 
-/* Selección de Personaje */
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.margen {
+    margin: 25px;
+}
+
+/* Selección de Personaje - Esferas Elementales */
 #seleccionar-personaje h2 {
-    color: #4A7C59; /* Verde oscuro */
+    color: var(--color-accent-gold);
 }
 
 .contenedor-opciones {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap; /* Para que se adapte en pantallas pequeñas */
-    gap: 15px; /* Espacio entre tarjetas de personaje */
-    margin-bottom: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px; /* Más espacio entre personajes */
+    margin-bottom: 40px;
 }
 
 .opcion-personaje input[type="radio"] {
-    display: none; /* Ocultamos el radio button por defecto */
+    display: none;
 }
 
 .tarjeta-radio {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 150px; /* Ancho de la tarjeta */
-    height: 180px; /* Alto de la tarjeta */
-    border: 3px solid #ccc;
-    border-radius: 10px;
+    justify-content: center; /* Centrar contenido */
+    width: 200px; /* Más ancho */
+    height: 240px; /* Más alto */
+    border: 3px solid var(--color-border-subtle);
+    border-radius: 20px; /* Más redondeado */
     cursor: pointer;
-    transition: all 0.3s ease;
-    background-color: #f8f8f8;
-    padding: 10px;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Transición suave */
+    background: var(--color-bg-medium); /* Fondo medio */
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de orbe elemental al pasar el mouse */
+.tarjeta-radio::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    opacity: 0;
+    transition: width 0.4s ease-out, height 0.4s ease-out, opacity 0.4s ease-out, transform 0.4s ease-out;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+.tarjeta-radio:hover::before {
+    width: 150%;
+    height: 150%;
+    opacity: 0.2;
 }
 
 .tarjeta-radio:hover {
-    border-color: #888;
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+    transform: translateY(-10px) scale(1.02); /* Elevar y escalar más */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+    border-color: var(--color-accent-gold); /* Borde dorado */
 }
+
+/* Colores específicos para el brillo de la tarjeta al pasar el mouse */
+.tarjeta-radio.fuego:hover::before { background: var(--gradient-fuego-light); }
+.tarjeta-radio.agua:hover::before { background: var(--gradient-agua-light); }
+.tarjeta-radio.tierra:hover::before { background: var(--gradient-tierra-light); }
+.tarjeta-radio.aire:hover::before { background: var(--gradient-aire-light); }
+
 
 .opcion-personaje input[type="radio"]:checked + .tarjeta-radio {
-    border-color: #ff7e00; /* Naranja fuego para selección */
-    background-color: #ffe8d1; /* Naranja muy claro */
-    box-shadow: 0 0 15px rgba(255, 126, 0, 0.5);
+    border-color: var(--color-accent-gold); /* Borde dorado para selección */
+    background: var(--color-bg-light); /* Fondo más claro al seleccionar */
+    box-shadow: 0 0 25px rgba(194, 140, 71, 0.7), 0 0 40px rgba(194, 140, 71, 0.4); /* Brillo dorado */
+    transform: translateY(-8px) scale(1.04);
+    color: var(--color-text-dark);
 }
 
+.opcion-personaje input[type="radio"]:checked + .tarjeta-radio::before {
+    opacity: 0.4; /* Brillo más pronunciado al seleccionar */
+    width: 180%;
+    height: 180%;
+}
+
+
 .tarjeta-radio p {
-    font-size: 1.2em;
+    font-size: 1.8em; /* ¡Más grande para los nombres de personajes! */
+    font-family: 'Zen Dots', cursive; /* Fuente mística */
     font-weight: bold;
-    margin-bottom: 8px;
+    color: var(--color-text-dark);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    z-index: 1; /* Asegurar que el texto esté sobre el brillo */
 }
 
 .icono-elemento {
-    width: 60px; /* Ajusta según el tamaño de tus iconos */
-    height: 60px;
-    margin-bottom: 8px;
-    object-fit: contain; /* Para que la imagen se ajuste bien */
+    width: 90px; /* Iconos aún más grandes */
+    height: 90px;
+    margin-bottom: 12px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.15)); /* Sombra suave para que destaquen */
+    z-index: 1;
 }
 
 .tarjeta-radio span {
-    font-size: 0.9em;
+    font-size: 1.4em; /* ¡Más grande para los emojis elementales! */
+    z-index: 1;
 }
 
-/* Botones */
+/* Botones Principales - Sigilo y Poder */
 .boton-principal {
-    background-color: #B8860B; /* DarkGoldenRod */
+    background-color: var(--color-accent-gold); /* Oro místico */
     color: white;
     border: none;
-    padding: 12px 25px;
-    font-size: 1.1em;
-    font-family: 'Nunito', sans-serif;
-    font-weight: bold;
-    border-radius: 8px;
+    padding: 18px 40px; /* Más padding para que sean más grandes */
+    font-size: 1.3em; /* Más grande */
+    font-family: 'Zen Dots', cursive; /* Fuente del título */
+    font-weight: normal;
+    border-radius: 30px; /* Suavemente redondeado */
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s ease-out;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    letter-spacing: 1.5px;
+    box-shadow: 0 6px 15px var(--color-shadow-soft),
+                inset 0 -3px 5px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.boton-principal::before { /* Brillo al pasar el mouse */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.1);
+    transform: translateX(-100%) skewX(-30deg);
+    transition: transform 0.4s ease-out;
+}
+
+.boton-principal:hover::before {
+    transform: translateX(100%) skewX(-30deg);
 }
 
 .boton-principal:hover {
-    background-color: #DAA520; /* GoldenRod */
-    transform: translateY(-2px);
+    background-color: #d8a05c; /* Oro más claro al pasar el mouse */
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15),
+                0 0 20px var(--color-accent-gold); /* Brillo dorado */
 }
 
 .boton-principal:active {
-    transform: translateY(0);
+    transform: translateY(1px) scale(0.98);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15),
+                inset 0 3px 5px rgba(0,0,0,0.2);
 }
 
-/* Sección de Ataque */
+/* Sección de Ataque - El Flujo del Combate */
 #seleccionar-ataque h2 {
-    color: #B22222; /* Firebrick */
+    color: var(--color-text-dark);
 }
 
 .info-vidas {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 15px;
-    font-size: 1.1em;
+    margin-bottom: 30px;
+    font-size: 1.5em; /* Aumentado */
+    background: var(--color-bg-medium); /* Fondo medio para vidas */
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--color-border-subtle);
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+    color: var(--color-text-dark);
+}
+
+.info-vidas p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Cormorant Garamond', serif; /* Elegante para la info de vida */
 }
 
 .info-vidas span {
     font-weight: bold;
-    font-size: 1.3em;
+    font-size: 2em; /* ¡Más grande para los números de vida! */
+    color: var(--color-accent-gold); /* Oro para los números */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1), 0 0 10px rgba(194, 140, 71, 0.5);
+    /* Descomenta y activa con JS si quieres animación: */
+    /* animation: pulseLife 0.8s ease-out forwards; */
+}
+
+/* @keyframes pulseLife {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); color: var(--color-fuego); }
+    100% { transform: scale(1); color: var(--color-accent-gold); }
+} */
+
+#personaje-jugador, #personaje-pc {
+    text-transform: capitalize;
+    color: var(--color-text-dark);
 }
 
 #personaje-seleccionado-info {
     font-style: italic;
-    margin-bottom: 20px;
-    font-size: 1.1em;
-    color: #555;
+    margin-bottom: 25px;
+    font-size: 1.2em;
+    color: var(--color-text-dark);
 }
 
 .contenedor-botones-ataque {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px; /* Espacio entre botones de ataque */
+    gap: 25px; /* Más espacio entre botones de ataque */
 }
-
+.fss{
+    font-size: 1.4rem;
+}
+.fsr{
+    font-size: 1.4rem;
+    padding:  10px 20px;
+}
+/* Botones de Ataque - Concentración Elemental */
 .boton-ataque {
     color: white;
-    border: none;
-    padding: 10px 18px;
-    font-size: 1em;
-    border-radius: 5px;
+    padding: 20px 35px; /* ¡Más padding para hacerlos grandes! */
+    font-size: 2.5em; /* ¡Más grande y legible! */
+    font-weight: bold;
+    border-radius: 15px; /* Ligeramente redondeados */
     cursor: pointer;
-    transition: opacity 0.3s ease, transform 0.2s ease;
-    min-width: 120px; /* Para que tengan un ancho mínimo similar */
-    box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-out;
+    min-width: 180px; /* Ancho mínimo generoso */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2),
+                inset 0 -4px 0px rgba(0,0,0,0.15); /* Sombra interna para volumen */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent; /* Borde inicial transparente */
+}
+
+.boton-ataque::after { /* Brillo elemental sutil */
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    transform: rotate(45deg);
+}
+
+.boton-ataque:hover::after {
+    opacity: 0.15;
 }
 
 .boton-ataque:hover {
-    opacity: 0.85;
-    transform: scale(1.05);
-}
-
-.boton-fuego { background-color: #FF4500; /* OrangeRed */ }
-.boton-agua { background-color: #1E90FF; /* DodgerBlue */ }
-.boton-tierra { background-color: #8B4513; /* SaddleBrown */ }
-.boton-aire { background-color: #87CEEB; /* SkyBlue */ }
-
-/* Sección de Mensajes */
-#mensajes h2 {
-    color: #2E8B57; /* SeaGreen */
-}
-#mensajes p {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-}
-#resultado-combate {
-    padding: 15px;
-    border: 1px dashed #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    margin-bottom: 15px;
-}
-#resultado-combate p {
-    font-weight: bold;
-    color: #333;
-}
-#ataque-jugador-mensaje, #ataque-enemigo-mensaje {
-    font-style: italic;
-}
-
-
-/* Sección Reiniciar */
-.boton-border{
-    border-radius: 50px;
-    font-size: medium;
-    padding: 10px 20px;
-}
-.boton-reiniciar {
-    background-color: #6A5ACD; /* SlateBlue */
-}
-.boton-reiniciar:hover {
-    background-color: #7B68EE; /* MediumSlateBlue */
-}
-
-/* Footer */
-footer {
-    margin-top: 40px;
-    text-align: center;
-    font-size: 0.9em;
-    color: #666;
-}
-
-/* ===== ESTILOS DE BOTONES REFINADOS ===== */
-
-/* Botón Principal (Seleccionar, Reiniciar) */
-.boton-principal {
-    background-color: #B8860B; /* DarkGoldenRod - Color base */
-    color: white;
-    border: 2px solid #A37409; /* Borde un poco más oscuro para profundidad */
-    padding: 12px 28px; /* Un poco más de padding */
-    font-size: 1.1em;
-    font-family: 'Nunito', sans-serif;
-    font-weight: bold;
-    border-radius: 25px; /* Radio de borde más redondeado, tipo "píldora" */
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.15), /* Sombra principal */
-                inset 0 -2px 3px rgba(0,0,0,0.1); /* Sombra interna sutil para efecto 3D */
-    position: relative; /* Para el efecto de presionado */
-    top: 0;
-}
-
-.boton-principal:hover {
-    background-color: #DAA520; /* GoldenRod - Más claro al pasar el mouse */
-    border-color: #B8860B;
-    transform: translateY(-3px); /* Elevar un poco más */
-    box-shadow: 0 8px 15px rgba(0,0,0,0.2), /* Sombra más pronunciada */
-                inset 0 -2px 3px rgba(0,0,0,0.05);
-}
-
-.boton-principal:active {
-    transform: translateY(1px); /* Efecto de ser presionado */
-    top: 2px; /* Simula que se hunde */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15), /* Sombra reducida al presionar */
-                inset 0 2px 3px rgba(0,0,0,0.2); /* Sombra interna más marcada */
-}
-
-/* Botones de Ataque */
-.contenedor-botones-ataque {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px; /* Un poco más de espacio entre botones de ataque */
-}
-
-.boton-ataque {
-    color: white;
-    border: none; /* Quitamos el borde por defecto para controlar con box-shadow */
-    padding: 12px 20px; /* Padding ajustado */
-    font-size: 1em;
-    font-weight: bold;
-    border-radius: 15px; /* Radio de borde redondeado, pero menos que el principal */
-    cursor: pointer;
-    transition: all 0.25s ease-out;
-    min-width: 130px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2), /* Sombra para efecto elevado */
-                inset 0 -3px 0px rgba(0,0,0,0.15); /* Sombra interna inferior para dar volumen */
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.3); /* Sombra de texto ligera */
-    position: relative; /* Para el efecto de presionado */
-    top: 0;
-}
-
-.boton-ataque:hover {
-    transform: translateY(-2px) scale(1.03); /* Levantar y escalar ligeramente */
-    box-shadow: 0 6px 12px rgba(0,0,0,0.25),
-                inset 0 -3px 0px rgba(0,0,0,0.1);
-    /* El brillo del color se maneja por cada botón específico si es necesario */
+    transform: translateY(-7px) scale(1.04); /* Elevar y escalar más */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    border-color: white; /* Borde blanco al pasar el mouse */
 }
 
 .boton-ataque:active {
-    transform: translateY(1px) scale(0.98); /* Hundir y escalar ligeramente */
-    top: 1px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2),
-                inset 0 2px 1px rgba(0,0,0,0.2);
+    transform: translateY(1px) scale(0.97);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2),
+                inset 0 3px 2px rgba(0,0,0,0.25);
 }
 
-/* Colores específicos para botones de ataque con ligera variación al hover */
-.boton-fuego { background-color: #FF4500; /* OrangeRed */ }
-.boton-fuego:hover { background-color: #ff6347; /* Tomato */ }
+/* Colores específicos para botones de ataque con degradados y brillo */
+#btn-punio { background-color: var(--color-fuego); }
+#btn-punio:hover::after { background: var(--gradient-fuego-light); }
+#btn-punio:hover { box-shadow: 0 10px 25px rgba(0,0,0,0.25), 0 0 20px var(--color-fuego); }
 
-.boton-agua { background-color: #1E90FF; /* DodgerBlue */ }
-.boton-agua:hover { background-color: #4682b4; /* SteelBlue */ }
+#btn-patada { background-color: var(--color-agua); }
+#btn-patada:hover::after { background: var(--gradient-agua-light); }
+#btn-patada:hover { box-shadow: 0 10px 25px rgba(0,0,0,0.25), 0 0 20px var(--color-agua); }
 
-.boton-tierra { background-color: #8B4513; /* SaddleBrown */ }
-.boton-tierra:hover { background-color: #a0522d; /* Sienna */ }
+#btn-barrida { background-color: var(--color-tierra); }
+#btn-barrida:hover::after { background: var(--gradient-tierra-light); }
+#btn-barrida:hover { box-shadow: 0 10px 25px rgba(0,0,0,0.25), 0 0 20px var(--color-tierra); }
 
-.boton-aire { background-color: #87CEEB; /* SkyBlue */ }
-.boton-aire:hover { background-color: #add8e6; /* LightBlue */ }
+/* Si tuvieras un botón de aire: */
+.boton-aire { background-color: var(--color-aire); }
+.boton-aire:hover::after { background: var(--gradient-aire-light); }
+.boton-aire:hover { box-shadow: 0 10px 25px rgba(0,0,0,0.25), 0 0 20px var(--color-aire); }
 
 
-/* Si tienes un botón de reiniciar específico con la clase .boton-principal */
-.boton-reiniciar { /* Hereda de .boton-principal, pero podemos sobrescribir si es necesario */
-    background-color: #6A5ACD; /* SlateBlue */
-    border-color: #483D8B; /* DarkSlateBlue */
+/* Sección de Mensajes - El Scriptorium de Batalla */
+#mensajes h2 {
+    color: var(--color-text-dark);
+}
+#mensajes p {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+#resultado-combate {
+    background-color: var(--color-text-dark); /* Fondo oscuro para contraste */
+    border: 1px solid var(--color-accent-gold); /* Borde dorado */
+    border-radius: 10px;
+    padding: 25px;
+    margin-top: 35px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2), inset 0 0 10px rgba(255,255,255,0.05);
+    font-size: 1.4em;
+    color: white; /* Letras BLANCAS para el resultado */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+#resultado-combate p {
+    font-weight: bold;
+    color: white !important; /* Asegurar que el texto sea blanco */
+    text-shadow: 0 0 8px rgba(255,255,255,0.8);
+}
+#ataque-jugador-mensaje, #ataque-enemigo-mensaje {
+    font-style: normal;
+    font-size: 1.2em;
+    color: white !important; /* Asegurar que el texto sea blanco */
+}
+
+/* Efectos visuales para el resultado (añadir con JS si el resultado es "ganaste" o "perdiste") */
+.resultado-ganaste {
+    color: #32CD32 !important; /* Verde lima */
+    text-shadow: 0 0 10px #32CD32, 0 0 20px rgba(50, 205, 50, 0.6) !important;
+}
+
+.resultado-perdiste {
+    color: var(--color-fuego) !important; /* Rojo fuego */
+    text-shadow: 0 0 10px var(--color-fuego), 0 0 20px rgba(230, 82, 44, 0.6) !important;
+}
+
+/* Sección Reiniciar */
+#reiniciar {
+    margin-top: 50px;
+}
+.boton-reiniciar {
+    background-color: var(--color-accent-gold); /* Oro para reiniciar */
+    border: none;
 }
 .boton-reiniciar:hover {
-    background-color: #7B68EE; /* MediumSlateBlue */
-    border-color: #6A5ACD;
+    background-color: #d8a05c; /* Oro más claro */
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15), 0 0 20px var(--color-accent-gold);
 }
 
-/* ===== FIN ESTILOS DE BOTONES REFINADOS ===== */
 
+/* Footer */
+footer {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 1em;
+    color: #888;
+}
 
-/* Media Queries para Responsividad */
+/* ===== Media Queries para Responsividad ===== */
 @media (max-width: 768px) {
     h1 {
-        font-size: 2.2em;
+        font-size: 3.5em;
     }
     h2 {
-        font-size: 1.5em;
+        font-size: 2em;
+    }
+    section {
+        padding: 25px;
     }
     .contenedor-opciones {
-        flex-direction: column; /* Apila las tarjetas de personaje */
+        flex-direction: column;
         align-items: center;
+        gap: 25px;
     }
     .tarjeta-radio {
-        width: 200px; /* Más ancho en móvil si se apilan */
-        height: auto; /* Altura automática para contenido */
-        padding: 15px;
+        width: 85%;
+        max-width: 280px;
+        height: auto;
+        padding: 18px;
+    }
+    .tarjeta-radio p {
+        font-size: 1.6em;
+    }
+    .tarjeta-radio span {
+        font-size: 1.2em;
     }
     .icono-elemento {
-        width: 50px;
-        height: 50px;
+        width: 80px;
+        height: 80px;
     }
     .info-vidas {
         flex-direction: column;
-        gap: 5px;
+        gap: 12px;
+        font-size: 1.3em;
+    }
+    .info-vidas span {
+        font-size: 1.8em;
+    }
+    .boton-principal, .boton-ataque {
+        padding: 15px 30px;
+        font-size: 1.2em;
+    }
+    .contenedor-botones-ataque {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .boton-ataque {
+        width: 90%;
+        max-width: 250px;
+    }
+    #resultado-combate {
+        font-size: 1.2em;
+        padding: 20px;
     }
 }
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 1.8em;
+        font-size: 2.8em;
     }
-    .boton-principal, .boton-ataque {
-        padding: 10px 15px;
-        font-size: 1em;
+    h2 {
+        font-size: 1.6em;
+    }
+    section {
+        padding: 20px;
     }
     .tarjeta-radio {
-        width: 90%; /* Casi ancho completo */
+        width: 95%;
         max-width: 250px;
     }
-    .contenedor-botones-ataque {
-        flex-direction: column; /* Apila botones de ataque */
-        align-items: center;
+    .tarjeta-radio p {
+        font-size: 1.4em;
+    }
+    .tarjeta-radio span {
+        font-size: 1em;
+    }
+    .icono-elemento {
+        width: 70px;
+        height: 70px;
+    }
+    .info-vidas {
+        font-size: 1.1em;
+    }
+    .info-vidas span {
+        font-size: 1.5em;
+    }
+    .boton-principal, .boton-ataque {
+        padding: 12px 25px;
+        font-size: 1.1em;
     }
     .boton-ataque {
-        width: 80%; /* Ancho de botones de ataque */
+        width: 95%;
+    }
+    #resultado-combate {
+        font-size: 1.1em;
+        padding: 18px;
     }
 }
