@@ -5,7 +5,7 @@ let personajePC = "";
 let vidasJugador = 3;
 let vidasPC = 3;
 
-// Mapa de emojis para mostrar en resultados
+// emojis para mostrar en resultados
 const emojis = {
     "Puño": "👊🏼",
     "Patada": "🦶🏼",
